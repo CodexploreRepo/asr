@@ -4,18 +4,39 @@
 
 ### Sound
 
-- Sound has properties: Frequent, Amplitude & Direction
-- Sine Wave: $y(t) = A\sin(2 \pi ft + \phi)$
+- Sound has properties: Frequency, Amplitude (Intensity DB/Power) & Direction
+- **Sine Wave**: $y(t) = A\sin(2 \pi ft + \phi)$
+- **Wavelength** $λ$ can be measured between any two points with the same phase
+
+<p align="center">
+<img src="../assets/img/sine_wavelength.png" width=250 /></p>
+
+- Frequency & Amplitude
+  - Higher frequency &#8594; Higher Sound
+  - Larger amplitude &#8594; Louder
+  <p align="center">
+  <img src="../assets/img/freq-amplitude.png" width=350 /></p>
 
 ### Audio
 
-- The electronic representation of Sound
-- `Audio Frequency`: 20 to 20kHz
-- `Sample Rate`: 16kHz, 44.1kHz (take 44,000 samples or measurements per second) &#8594; The more sample per second get, the higher quality captured
+- Audio is the electronic representation of sound
+- Audio Frequency.
+
+  - Range: 20 to 20kHz
+  - Describes the differences of wavelength - High Frequency &#8594; Short Wavelegth - Low Frequency &#8594; Long Wavelegth
+    <p align="center">
+    <img src="../assets/img/wavelength_frequency.png" width=350 /></p>
+
+- `Intensity` (DB/Power): describes the amplitude (height) of the wave.
+<p align="center">
+  <img src="../assets/img/intensity.gif" width=250 /></p>
+
+- `Sample Rate` (Resolution of Audio): how the computer reads in the audio file.
+  - Range: 16kHz, 44.1kHz (take 44,000 samples or measurements per second) &#8594; The more sample per second get, the higher quality captured
 - `Waveform`: samples over the time
 - `Spectrogram`: a visual way of representing the signal strength, or “loudness”, of a signal over time at **various** frequencies present in a particular waveform.
 
-  - We can convert the **waveform** to **spectrogram** (image) &#8594; can classify sound using the same technique when classifying the images
+  - We can convert the **waveform** to **Spectrogram** (image) &#8594; can classify sound using the same technique when classifying the images
 
   <p align="center">
   <img src="../assets/img/spectrogram.png" width=400 /></p>
@@ -56,4 +77,5 @@
 
 - Application:
   - **Virtual Speech Assistants**: Many edge devices have an embedded virtual assistant to interact with the end users better.
+  - **Caption Generation**: to take audio as input from sources to generate automatic captions through transcription, for live-streamed or recorded videos.
 - Metrics: WER (Word Error Rate)
