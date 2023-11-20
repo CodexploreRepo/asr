@@ -87,11 +87,15 @@ $$dB(I) = 10*log_{10}{(\frac{I}{I_{TOH}})}$$
 
 - The Mel Scale was developed to take this into account by conducting experiments with a large number of listeners.
 - It is a scale of pitches, such that each unit is judged by listeners to be equal in pitch distance from the next.
+- Formula:
 
-<p align="center">
-  <img src="../assets/img/mel-scale.png" width=300 /><br>
-Mel Scale measures human perception of pitch
-</p>
+  - $$ m = 2595 log(1 + \frac{f}{500})$$
+  - $$ f = 700 (10^{m/2595} - 1)$$
+
+  <p align="center">
+    <img src="../assets/img/mel-scale.png" width=300 /><br>
+  Mel Scale measures human perception of pitch
+  </p>
 
 ## How do humans hear Amplitudes?
 

@@ -121,3 +121,54 @@ $$e^{i\gamma} = cos(\gamma) + i*sin(\gamma)$$
 <img src="../.././assets/img/inverse-fourier-transform-ex2.png" width=450 />
 <img src="../.././assets/img/inverse-fourier-transform-ex3.png" width=450 />
 </p>
+
+## Discrete Fourier Transform (DFT)
+
+- In continuos case $g(t)$, we use the integral to integrate over time $dt$
+- In discrete case (samples) $x(n)$, we use sum
+
+<p align="center">
+<img src="../.././assets/img/discrete-fourier-transform.png" width=250 />
+</p>
+
+## Short-Time Fourier Transform (STFT)
+
+- **STFT**: consider small segments of the signal, and apply FTT locally
+
+<p align="center">
+<img src="../.././assets/img/short-time-fourier-transform-intuition.png" width=450 />
+</p>
+
+- Windowing: Apply windowing function $w(k)$ to signal $x(k)$
+
+  - Usually, `window_size = frame_size`
+  - If `window_size != frame_size`, a padding will be applied.
+  $$x_w(k) = x(k)*w(k)$$
+  <p align="center">
+  <img src="../.././assets/img/window_size.png" width=450 />
+  </p>
+
+- Hop size ($H$): to get the overlaping frame
+  <p align="center">
+  <img src="../.././assets/img/hop_size.png" width=450 />
+  </p>
+
+- $m$: frame number
+- STFT Formula $S(m,k)$:
+  <p align="center">
+  <img src="../.././assets/img/short-time-fourier-transform-formula.png" width=650 />
+  </p>
+
+- Output of DFT vs STFT:
+  - DFT:
+    - Spectral vector (# frequency bins)
+    - N complex Fourier coefficients
+  - STFT:
+    - Spectral matrix (**# frequency bins**, **# frames**)
+    - Complex Fourier coefficients
+- STFT Output Calculation
+  - No. of frequency bins $ = \frac {frame size}{2} + 1 $
+  - No. of frames $ = \frac {samples - frame size}{hopsize} + 1$
+  - Example: Signal = 10K samples, Frame size = 1000, Hop size = 500
+    - No. of frequency bins = 1000 / 2 + 1 = 501
+    - No. of frames = (10000 - 1000) / 500 + 1 = 19
