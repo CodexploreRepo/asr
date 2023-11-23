@@ -8,4 +8,4 @@
 - [Audio Features](./docs/features/audio-features.md): [Notebook](./notebooks/audio-features.ipynb)
   - [Fourier Transform](./docs/features/fourier-transform.md)
   - [Mel Spectrogram](./docs/features/mel-spectrogram.md)
-  - [Mel-Frequency Cepstral Coefficients](./docs/features/mel-frequency-cepstral-coefficients.md)
+  - [Mel-Frequency Cepstral Coefficients](./docs/features/mel-frequency-cepstral-coefficients.md): [Notebook](./notebooks/mfcc.ipynb)
