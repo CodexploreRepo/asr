@@ -1,0 +1,3 @@
+# Vocab
+
+- Linguistics: phonemes
